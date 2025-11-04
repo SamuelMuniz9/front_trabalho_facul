@@ -1,6 +1,7 @@
 @import url(../styles/sidebars.css);
 @import url(../styles/reset.css);
 @import url(../dashboard.css);
+@import url(../styles/bootstrap.min.css);
 
 .bd-placeholder-img {
   font-size: 1.125rem;
