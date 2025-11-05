@@ -18,6 +18,8 @@
     <link href="/styles/bootstrap.min.css" rel="stylesheet" />
     <meta name="theme-color" content="#712cf9" />
     <link href="/styles/sidebars.css" rel="stylesheet" />
+    <link href="/styles/estoque.css" rel="stylesheet" />
+
 
 
  
@@ -285,6 +287,114 @@
         <!--fora barra lateral--->
 
         <header>
+               <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-text">
+                <h1>Sistema de Gestão de Estoque</h1>
+                <p>Controle completo de entrada e saída de materiais</p>
+            </div>
+        </div>
+
+        <!-- status Cards -->
+        <div class="stats-grid">
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Estoque Total</span>
+                    <svg class="icon text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                    </svg>
+                </div>
+                <div class="stat-value" id="totalStock">  <!----DEIXAR INSERIDO O VALOR AQUI --> </div>
+                <div class="stat-label">unidades em estoque</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Total de Entradas</span>
+                    <svg class="icon text-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                    </svg>
+                </div>
+                <div class="stat-value text-green" id="totalEntries">  <!----DEIXAR INSERIDO O VALOR AQUI --> </div>
+                <div class="stat-label">unidades recebidas</div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="card-title">Total de Saídas</span>
+                    <svg class="icon text-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/>
+                    </svg>
+                </div>
+                <div class="stat-value text-red" id="totalExits">     <!----DEIXAR INSERIDO O VALOR AQUI -->  </div>
+                <div class="stat-label">unidades enviadas</div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab-list">
+                <button class="tab-button active">Movimentações</button>
+     
+            </div>
+
+            <!-- Movements Tab -->
+            <div id="movements-tab" class="tab-content active">
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h2>Movimentações de Estoque</h2>
+                            <p class="text-muted">Histórico completo de entradas e saídas de materiais</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" href="/pages/inserir.html" >
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+                            </svg>
+                            Nova Entrada
+                        </button>
+                        <button class="btn btn-secondary" href="/pages/editar.html">
+                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+                            </svg>
+                            Saída
+                        </button>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nº Ordem</th>
+                                    <th>Data Entrada</th>
+                                    <th>Qtd. Entrada</th>
+                                    <th>Proveniência</th>
+                                    <th>Data Saída</th>
+                                    <th>Qtd. Saída</th>
+                                    <th>Destino</th>
+                                    <th>Estoque Atual</th>
+                                    <th>Observações</th>
+                                    <th>Tipo</th>
+                                </tr>
+                            </thead>
+                            <tbody id="movementsTable">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+
+
+
 
         </header>
         <!----->
